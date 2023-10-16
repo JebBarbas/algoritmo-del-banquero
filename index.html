@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo del Banquero</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="step show flex justify-center" data-step="1">
+            <jeb-matrix 
+                id="matrix-iniciales"
+
+                rows="1" 
+                
+                cols="3" 
+                colTitles="R1,R2,R3" 
+                
+                title="Recursos Iniciales"
+            ></jeb-matrix>
+        </div>
+
+        <div class="step show flex justify-between" data-step="2">
+            <jeb-matrix 
+                id="matrix-maximos"
+
+                rows="4" 
+                rowTitles="P1,P2,P3,P4"
+                
+                cols="3" 
+                colTitles="R1,R2,R3"
+                
+                title="Máximos"
+            ></jeb-matrix>
+
+            <jeb-matrix 
+                id="matrix-en-uso"
+
+                rows="4" 
+                rowTitles="P1,P2,P3,P4"
+                
+                cols="3" 
+                colTitles="R1,R2,R3"
+                
+                title="En Uso"
+            ></jeb-matrix>
+
+            <jeb-matrix 
+                id="matrix-necesarios"
+
+                rows="4" 
+                rowTitles="P1,P2,P3,P4"
+                
+                cols="3" 
+                colTitles="R1,R2,R3"
+                
+                title="Necesarios"
+            ></jeb-matrix>
+        </div>
+
+        <div class="step show flex justify-center" data-step="3">
+            <jeb-matrix 
+                id="matrix-disponibles"
+
+                rows="1" 
+                
+                cols="3" 
+                colTitles="R1,R2,R3" 
+                
+                title="Recursos Disponibles"
+            ></jeb-matrix>
+        </div>
+
+        <div class="step show flex align-center justify-between" data-step="4">
+            <div>
+                <label for="cmb-proceso">Proceso que solicita:</label>
+                <select id="cmb-proceso" class="select">
+                    <option value="0">P1</option>
+                    <option value="1">P2</option>
+                    <option value="2">P3</option>
+                    <option value="3">P4</option>
+                </select>
+            </div>
+
+            <jeb-matrix 
+                id="matrix-a-solicitar"
+
+                rows="1" 
+                
+                cols="3" 
+                colTitles="R1,R2,R3" 
+                
+                title="Recursos A Solicitar"
+            ></jeb-matrix>
+
+            <button type="button" class="btn btn-primary btn-lg" id="btn-calcular">Calcular</button>
+        </div>
+    </main>
+
+    <script type="importmap">
+        { 
+            "imports": { 
+                "lit": "./lib/js/lit-core.min.js"
+            }
+        }
+    </script>
+    <script src="./lib/js/sweetalert.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

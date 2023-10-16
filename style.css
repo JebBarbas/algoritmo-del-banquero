@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Midnights';
+    src: url('./Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Midnights';
+    background-color: #0f172a;
+    color: white;
+    min-height: 100vh;
+}
+
+main {
+    width: 90vw;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+h3 {
+    margin-bottom: 0.75rem;
+}
+
+.step {
+    margin-bottom: 2rem;
+}
+
+.step:not(.show){
+    display: none;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.btn {
+    --jeb-btn-color: #eee;
+    --jeb-btn-text: #000;
+
+    --jeb-btn-padding-y: 0.25rem;
+    --jeb-btn-padding-x: 0.5rem;
+
+    border: 0;
+    padding: var(--jeb-btn-padding-y) var(--jeb-btn-padding-x);
+    background-color: var(--jeb-btn-color);
+    color: var(--jeb-btn-text);
+    border-radius: 0.2rem;
+}
+
+.btn:disabled {
+    opacity: 80%;
+}
+
+.btn:not(:disabled){
+    cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: color-mix(in srgb, var(--jeb-btn-color) 80%, black);
+}
+
+.btn:active:not(:disabled) {
+    background-color: color-mix(in srgb, var(--jeb-btn-color) 70%, black);
+}
+
+.btn.btn-primary {
+    --jeb-btn-color: #2563eb;
+    --jeb-btn-text: #fff;
+}
+
+.btn.btn-lg {
+    --jeb-btn-padding-y: 1rem;
+    --jeb-btn-padding-x: 2rem;
+}
+
+.select {
+    padding: 0.1rem;
+}
